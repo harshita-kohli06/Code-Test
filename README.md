@@ -1,4 +1,8 @@
-# Woven Graduate Code Test
+------------------------------------------------------------------------
+This is the project README file.
+------------------------------------------------------------------------
+
+PROJECT TITLE: Woven graduate coding test
 
 PURPOSE OF PROJECT: CLI Application to calculate the distance from the starting point
 
