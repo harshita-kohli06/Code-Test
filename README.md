@@ -12,7 +12,9 @@ HOW TO START THIS PROJECT: Create object of Robo Class and invoke the start() me
 
 AUTHORS: HARSHITA KOHLI
 
-USER INSTRUCTIONS: Start by entering the valid commands and follow the instructions on the screen
+USER INSTRUCTIONS: 
+                   
+                   Start by entering the valid commands and follow the instructions on the screen
 
                    The commands must be comma separated in format <command><number>.
                    
