@@ -2,15 +2,15 @@
 This is the project README file.
 ------------------------------------------------------------------------
 
-PROJECT TITLE: Woven graduate coding test
+PROJECT TITLE:  Woven graduate coding test
 
-PURPOSE OF PROJECT: CLI Application to calculate the distance from the starting point
+PURPOSE OF PROJECT:  CLI Application to calculate the distance from the starting point
 
-VERSION or DATE: 28/JAN/2020
+VERSION or DATE:  28/JAN/2020
 
-HOW TO START THIS PROJECT: Create object of Robo Class and invoke the start() method
+HOW TO START THIS PROJECT:  Create object of Robo Class and invoke the start() method
 
-AUTHORS: HARSHITA KOHLI
+AUTHORS:  HARSHITA KOHLI
 
 USER INSTRUCTIONS: 
                    
