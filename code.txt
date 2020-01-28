@@ -5,7 +5,7 @@ import java.io.*;
  * Write a description of class Robo here.
  *
  * @author (Harshita Kohli)
- * @version (a version number or a date)
+ * @version (V 2.0)
  */
 public class Robo
 {
@@ -30,88 +30,96 @@ public class Robo
 
     public static void calculateDistance(String commands)
     {
-        int forwardCount = 0;
-        int backwardCount = 0;
         int rightCount = 0;
         int leftCount = 0;
-        int dirR = 0;
-        int dirL = 0;
+        int dir = 0;
+        int dir1 = 0;
         int x = 0;
         int y = 0;
         String[] command = commands.split(",");
         for (String s : command)
         {
-
+            
             if(Character.toString(s.charAt(0)).equals("R"))
             {
-                dirR = ((Integer.parseInt(s.substring(1)))) % 4; 
+                dir1 = ((Integer.parseInt(s.substring(1))) % 4); 
+                if(dir == 0 || dir == 1 || dir == 2 )
+                {
+                    dir = dir + dir1;
+                }
+                else
+                {
+                    dir = 0;
+                }
             }
             else if(Character.toString(s.charAt(0)).equals("L"))
             {
-                dirL = ((Integer.parseInt(s.substring(1)))) % 4;
+             dir1 = ((Integer.parseInt(s.substring(1))) % 4); 
+             if(dir == 1 || dir == 2 || dir == 3 )
+                {
+                    dir = dir - dir1;
+                }
+                else
+                {
+                    dir = 3;
+                }   
             }
             else if(Character.toString(s.charAt(0)).equals("F"))
             {
-                if (dirR == 0 || dirL == 0)
+                if (dir == 0)
                 {
-                    x += Integer.parseInt(s.substring(1));
+                    x = x + Integer.parseInt(s.substring(1));
+                    y = y;
                 }
-                else if (dirR == 1)
+                else if (dir == 1)
                 {
-                    y -= Integer.parseInt(s.substring(1));
+                    y = y - Integer.parseInt(s.substring(1));
+                    x = x;
                 }
-                else if (dirL == 1)
+                
+                else if (dir == 2)
                 {
-                    y += Integer.parseInt(s.substring(1));
+                    x = x - Integer.parseInt(s.substring(1));
+                    y = y;
                 }
-                else if (dirR == 2 || dirL == 2)
+                else if (dir == 3)
                 {
-                    x -= Integer.parseInt(s.substring(1));
-                }
-                else if (dirR == 3)
-                {
-                    y += Integer.parseInt(s.substring(1));
-                }
-                else if (dirL == 3)
-                {
-                    y -= Integer.parseInt(s.substring(1));
+                    y = y + Integer.parseInt(s.substring(1));
+                    x = x;
                 }
             }
             else if(Character.toString(s.charAt(0)).equals("B"))
             {
-                if (dirR == 0 || dirL == 0)
+                if (dir == 0)
                 {
-                    x -= Integer.parseInt(s.substring(1));
+                    x = x - Integer.parseInt(s.substring(1));
+                    y = y;
                 }
-                else if (dirR == 1)
+                else if (dir == 1)
                 {
-                    y += Integer.parseInt(s.substring(1));
+                    y = y + Integer.parseInt(s.substring(1));
+                    x = x;
                 }
-                else if (dirL == 1)
+                
+                else if (dir == 2)
                 {
-                    y -= Integer.parseInt(s.substring(1));
+                    x = x + Integer.parseInt(s.substring(1));
+                    y = y;
                 }
-                else if (dirR == 2 || dirL == 2)
+                else if (dir == 3)
                 {
-                    x += Integer.parseInt(s.substring(1));
+                    y = y - Integer.parseInt(s.substring(1));
+                    x = x;
                 }
-                else if (dirR == 3)
-                {
-                    y -= Integer.parseInt(s.substring(1));
-                }
-                else if (dirL == 3)
-                {
-                    y += Integer.parseInt(s.substring(1));
-                }
-            }   
-            dirR++;
-            dirL++;
+            }  
         }
-
+          
         System.out.println(x);
         System.out.println(y);
+        System.out.println(dir);
         int distanceFromHome = (Math.abs(x)+ Math.abs(y));
         System.out.println("Distance from starting point: " + Math.abs(distanceFromHome));
+
     }
 
     public void start() 
