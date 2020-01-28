@@ -1,7 +1,5 @@
 # Woven Graduate Code Test
 
-PROJECT TITLE: Woven graduate coding test
-
 PURPOSE OF PROJECT: CLI Application to calculate the distance from the starting point
 
 VERSION or DATE: 28/JAN/2020
